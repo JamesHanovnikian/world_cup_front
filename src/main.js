@@ -7,6 +7,7 @@ axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localh
 
 Vue.config.productionTip = false
 
+// ffjeje
 new Vue({
   router,
   render: h => h(App)
