@@ -1,10 +1,9 @@
 <template>
   <div class="home">
-    <h1> World Cup Predictor - Qatar </h1>
+    <h1> World Cup Predictor - Qatar </h1> 
 
+   
 
-    {{ currentGroup["teams"] }}
-     
     <div class="table-header"> 
       <button v-on:click="showTournamentGroup(1)"> Group A </button> 
       <button v-on:click="showTournamentGroup(2)"> Group B </button> 
@@ -32,9 +31,16 @@
         <th> </th> 
         <th> {{  team.group_wins }}</th> 
         <th> {{ team.group_losses }}</th> 
-        <th> {{ team.goal_diff }}</th> 
+        <th> {{ team.total_goals}} </th> 
+        <th> {{ team.total_goals}} </th> 
+        <th> {{ team.goal_diff }} </th> 
       </tr>
     </table>
+     
+     <ol> 
+       <li v-for="match in currentGroup.matches"> {{ match.date }} {{ match.stadium.name }} {{ match.home_team_id}} vs.  {{ match.away_team_id}} </li> 
+     </ol> 
+
   </div>
 </template>
 
