@@ -2,8 +2,6 @@
   <div class="home">
     <h1> World Cup Predictor - Qatar </h1> 
 
-   
-
     <div class="table-header"> 
       <button v-on:click="showTournamentGroup(1)"> Group A </button> 
       <button v-on:click="showTournamentGroup(2)"> Group B </button> 
@@ -38,7 +36,7 @@
     </table>
      
      <ol> 
-       <li v-for="match in currentGroup.matches"> {{ match.date }} {{ match.stadium.name }} {{ match.home_team_id}} vs.  {{ match.away_team_id}} </li> 
+       <li v-for="match in currentGroup.matches"> {{ match.date }} {{ match.stadium.name }} {{ match.home_team_name}} vs.  {{ match.away_team_name}} </li> 
      </ol> 
 
   </div>
