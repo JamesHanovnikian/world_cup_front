@@ -35,10 +35,12 @@
       </tr>
     </table>
      
-     <ol> 
-       <li v-for="match in currentGroup.matches"> {{ match.date }} {{ match.stadium.name }} {{ match.home_team_name}} vs.  {{ match.away_team_name}} </li> 
-     </ol> 
-
+     <ul> 
+       <li v-for="match in currentGroup.matches">  
+         <span class="date-block"> Date: {{ match.display_date }} </span>  <span class="date-block"> Location: {{ match.stadium.name }} </span> 
+         Matchup: {{ match.home_team_name}} vs.  {{ match.away_team_name}} </li> 
+     </ul> 
+    <button> Submit  </button> 
   </div>
 </template>
 
@@ -62,7 +64,9 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-
+.date-block {
+  padding-right: 15px;
+}
 .table-header {
   display: flex;
   width: 60%;
